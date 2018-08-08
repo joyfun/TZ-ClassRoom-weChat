@@ -1,0 +1,170 @@
+/* 私聊块 */
+.chat-message {
+	margin-bottom: 24rpx;
+}
+.chat-message .msg-avatar {
+	width: 48rpx;
+	height: 48rpx;
+	float: left;
+	border-radius: 50%;
+}
+.chat-content {
+	font-size: 30rpx;
+	width: auto;
+	max-width: 520rpx;
+	position: relative;
+	margin-top: 8rpx;
+	color: #303943;
+	line-height: 50rpx;
+	margin-left: 30rpx;
+	display: inline-block;
+	padding: 15rpx 32rpx;
+	background: #fff;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+	word-break: break-all;
+}
+.chat-content:before {
+	width: 0;
+	height: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, 0);
+	border-width: 20rpx 15rpx;
+	border-style: solid;
+	border-color: transparent;
+	border-top-color: #fff;
+	/* z-index: -1; */
+}
+.chat-content:after {
+	content: '';
+	width: 30rpx;
+	height: 40rpx;
+	position: absolute;
+	top: 0;
+	right: 100%;
+	background: #f3f5f7;
+	border-radius: 50%;
+	/* z-index: -1; */
+}
+.chat-content .msg-icon {
+	width: 9px;
+	height: 9px;
+	content: '';
+	position: absolute;
+	top: 0rpx;
+	left: -6.5rpx;
+}
+.chat-content .text image {
+	max-width: 100%;
+	max-height: 800rpx;
+	border-radius: 0;
+	float: none;
+}
+.chat-message.me {
+	text-align: right;
+}
+.chat-message.me .msg-avatar {
+	float: right;
+}
+.chat-message.me .chat-content {
+	color: #fff;
+	text-align: left;
+	margin-right: 30rpx;
+	background: #3073f4;
+}
+.chat-message.me .chat-content:before {
+	left: auto;
+	right: 0;
+	transform: translate(50%, 0);
+	border-top-color: #3073f4;
+}
+.chat-message.me .chat-content:after {
+	left: 100%;
+	right: auto;
+}
+.chat-content.me .msg-icon {
+	left: auto;
+	right: -10rpx;
+}
+.chat-message.time {
+	font-size: 28rpx;
+	color: #a1a1a3;
+	text-align: center;
+}
+/* 消息状态 */
+.live-status {
+	width: 44rpx;
+	height: 44rpx;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin-left: 10rpx;
+	transform: translate(0, -52%);
+}
+/* .live-loading {
+  width: 40rpx;
+  height: 40rpx;
+} */
+.me .live-status {
+	left: auto;
+	right: 100%;
+	margin-right: 10rpx;
+}
+/* 发送块 */
+.live-box {
+	padding: 14rpx 29rpx;
+	flex: 0;
+	border-top: 1rpx solid #bdc6cf;
+	box-sizing: border-box;
+}
+.live-box input {
+	font-size: 30rpx;
+	width: 540rpx;
+	min-height: 42rpx;
+	float: left;
+	padding: 13rpx 20rpx;
+	background: #efefef;
+	border-radius: 8rpx;
+	/* box-sizing: border-box; */
+}
+.live-box textarea {
+	font-size: 30rpx;
+	width: 540rpx;
+	min-height: 42rpx;
+	float: left;
+	padding: 19rpx 20rpx 13rpx;
+	background: #efefef;
+	border-radius: 8rpx;
+	/* box-sizing: border-box; */
+}
+.live-box .send {
+	font-size: 30rpx;
+	width: 94rpx;
+	height: 56rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 56rpx;
+	float: right;
+	/* margin-left: 28rpx; */
+	padding: 0;
+	background: #a1a1a3;
+	border: none;
+	border-radius: 8rpx;
+	margin-top: 8rpx;
+}
+.live-box .send.active {
+	background: #436bfd;
+}
+.iconFlower {
+	width: 42rpx;
+	height: 56rpx;
+	margin-top: 10rpx;
+}
+.iconOne {
+	width: 57rpx;
+	height: 56rpx;
+	margin: 10rpx 26rpx 0 32rpx;
+}

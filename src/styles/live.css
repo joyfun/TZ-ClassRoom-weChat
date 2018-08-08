@@ -1,0 +1,684 @@
+page {
+	height: auto;
+	line-height: 24rpx;
+}
+
+.lf {
+	float: left;
+}
+
+.rf {
+	float: right;
+}
+
+/* 消息状态 */
+
+.live-room .live-status {
+	width: 35rpx;
+	height: 35rpx;
+}
+.live-room .me .live-status {
+	left: 100%;
+}
+
+/* 布局 */
+
+.live-container {
+	font-size: 28rpx;
+	font-family: PingFangSC-Regular, microsoft yahei;
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+}
+
+.live-top {
+	position: relative;
+	width: 750rpx;
+	height: 450rpx;
+	color: #fff;
+	white-space: nowrap;
+	background: rgba(3, 12, 29, 1);
+}
+
+.live-top .cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.live-top live-player {
+	width: 100%;
+	height: 100%;
+}
+
+.live-top .live-tip {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 16rpx 32rpx;
+	margin-top: 0;
+	transform: translate(-50%, -50%);
+	border: 1rpx solid #fff;
+	border-radius: 38rpx;
+	background: rgba(3, 12, 29, 0.4);
+}
+
+.live-bottom {
+	width: 750rpx;
+	/* position: absolute; */
+	/* top: 400rpx; */
+	/* bottom: 0; */
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	position: relative;
+}
+.no-login-shade {
+	width: 100%;
+	position: fixed;
+	top: 450rpx;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0);
+	z-index: 4;
+}
+
+.live-room,
+.live-teachers,
+.live-chat {
+	position: relative;
+	width: 100%;
+	flex: 1;
+	overflow: auto;
+	z-index: 2;
+}
+
+/* 标题行 */
+
+.live-bar {
+	line-height: 88rpx;
+	z-index: 2;
+}
+
+/* 标题、老师、人数 */
+
+.course-title {
+	font-size: 30rpx;
+	color: #a1a1a3;
+	padding: 0 28rpx;
+	/* border-bottom: 1rpx solid #f1f1f1; */
+	overflow: hidden;
+}
+
+.course-title .title {
+	font-family: 700;
+	color: #303943;
+}
+
+.course-title .name {
+	padding-right: 18rpx;
+	border-right: 1rpx solid #f3f5f7;
+}
+
+.course-title .num-image {
+	width: 28rpx;
+	height: 28rpx;
+	margin: 0 12rpx 0 17rpx;
+	vertical-align: -2rpx;
+}
+
+.course-title .share button {
+	line-height: 88rpx;
+	padding: 0;
+	border: none;
+}
+
+.course-title .share-image {
+	width: 40rpx;
+	height: 42rpx;
+	margin-top: 21rpx;
+	/* vertical-align: middle; */
+}
+
+/* 聊天室消息 */
+
+.live-room,
+.live-chat {
+	padding: 40rpx 30rpx 0;
+	background: #f3f5f7;
+	box-sizing: border-box;
+}
+.live-box.room input,
+.live-box.room textarea {
+	width: 375rpx;
+}
+
+/* .live-room {
+	border-top: 1rpx solid #f1f1f1;
+} */
+
+.msg-avatar {
+	width: 48rpx;
+	height: 48rpx;
+	border-radius: 50%;
+}
+
+.room-message {
+	font-size: 28rpx;
+	margin-bottom: 40rpx;
+	overflow: hidden;
+}
+
+.room-message .notify {
+	line-height: 52rpx;
+	display: inline-block;
+	padding: 0 30rpx;
+	border-radius: 10rpx;
+}
+
+.room-message .mute {
+	color: #a1a1a3;
+	background: #ebebeb;
+}
+
+.room-message .welcome {
+	color: #55595c;
+	background: #f9e9b1;
+}
+
+.room-message .welcome .nick {
+	color: #e89e2a;
+}
+
+.room-message .flower {
+	color: #f54436;
+	background: #faf2b2;
+}
+
+.room-message .flower .nick {
+	/* color: #F54436; */
+	margin-right: 18rpx;
+}
+
+.room-message .flower .img-flower {
+	width: 27rpx;
+	height: 37rpx;
+	vertical-align: middle;
+	margin-left: 20rpx;
+}
+
+.room-message .room-content {
+	font-size: 28rpx;
+	color: #a1a1a3;
+	position: relative;
+	float: left;
+	max-width: 560rpx;
+}
+.room-message.me .room-content,
+.room-message.me .room-content .text {
+	color: #f54436;
+}
+
+.room-content .badge {
+	font-size: 20rpx;
+	color: #97bafc;
+	line-height: 30rpx;
+	vertical-align: text-bottom;
+	display: inline-block;
+	padding: 0 5rpx;
+	margin-right: 15rpx;
+	background: #f0f7ff;
+	border: 1px solid #97bafc;
+	border-radius: 4rpx;
+}
+
+.room-message.teacher .badge {
+	color: #e3b618;
+	background: #fef9cd;
+	border-color: #e6d64d;
+}
+
+.room-message.tutor .badge {
+	color: #9ad094;
+	background: #eeffec;
+	border-color: #b8dba4;
+}
+
+.room-message.check .badge {
+	color: #e7c1f0;
+	background: #fdf4fe;
+	border-color: #e7c1f0;
+}
+
+.room-content .text {
+	color: #303943;
+	max-width: 100%;
+	line-height: 40rpx;
+	display: inline-block;
+	margin-left: 25rpx;
+	word-break: break-all;
+	/* line-height: 30rpx; */
+	vertical-align: middle;
+}
+.room-content .text::first-line {
+	line-height: 30rpx;
+}
+
+.room-message .text.green {
+	color: #43c052;
+}
+
+.room-message .text image {
+	max-width: 100%;
+	max-height: 800rpx;
+	border-radius: 0;
+	float: none;
+}
+
+.room-message .msg-emoji {
+	vertical-align: middle;
+}
+
+/* 老师列表标题 */
+
+.teacher-bar {
+	position: relative;
+	font-size: 36rpx;
+	color: #303943;
+	text-align: center;
+	padding: 0 125rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: #fff;
+}
+
+.teacher-bar .back {
+	position: absolute;
+	top: 22rpx;
+	right: 0;
+	font-size: 28rpx;
+	line-height: 44rpx;
+	padding: 0 33rpx;
+	border-left: 1px solid #e4e6e8;
+}
+
+/* 老师列表 */
+
+.live-teachers {
+	background: #f3f5f7;
+}
+
+.live-teachers .teacher {
+	padding: 36rpx 30rpx;
+	border-top: 1px solid #f3f5f7;
+	background: #fff;
+	overflow: hidden;
+}
+
+.live-teachers .teacher-avatar {
+	width: 88rpx;
+	height: 88rpx;
+	border-radius: 50%;
+}
+
+.live-teachers .teacher .content {
+	color: #a1a1a3;
+	line-height: 44rpx;
+	margin-left: 123rpx;
+}
+
+.live-teachers .teacher .content > view {
+	overflow: hidden;
+}
+
+.live-teachers .teacher .content .max {
+	max-width: 440rpx;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.live-teachers .teacher .content .name {
+	font-size: 34rpx;
+	color: #303943;
+}
+
+.live-teachers .teacher .content .time {
+	font-size: 24rpx;
+}
+
+.live-teachers .teacher .content .text {
+	font-size: 30rpx;
+}
+
+/* 私聊块 */
+
+.chat-message.time {
+	font-size: 28rpx;
+	color: #a1a1a3;
+	text-align: center;
+}
+
+/* 消息提示 */
+
+.msg-tip {
+	width: 66rpx;
+	font-size: 22rpx;
+	position: fixed;
+	bottom: 185rpx;
+	right: 30rpx;
+	color: #fff;
+	line-height: 52rpx;
+	padding: 7rpx 8rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 33rpx;
+	z-index: 3;
+	box-sizing: border-box;
+	animation: 4s tip linear 1;
+}
+
+.tip-shink {
+	animation: 1s infinite shink;
+}
+
+@keyframes shink {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes tip {
+	0% {
+		width: 66rpx;
+	}
+	25% {
+		width: 306rpx;
+	}
+	75% {
+		width: 306rpx;
+	}
+	100% {
+		width: 66rpx;
+	}
+}
+
+.msg-tip .chat-image {
+	width: 50rpx;
+	height: 52rpx;
+	vertical-align: middle;
+	margin-right: 8rpx;
+}
+
+.msg-tip .unread {
+	position: absolute;
+	top: 0;
+	left: 36rpx;
+	/* right: 13rpx; */
+	width: 15rpx;
+	height: 15rpx;
+	background: #f54436;
+	border-radius: 50%;
+	padding: 0;
+}
+
+.msg-tip .tip {
+	font-size: 28rpx;
+	position: absolute;
+	top: 8rpx;
+	right: 100%;
+	color: #fd7510;
+	line-height: 74rpx;
+	padding: 0 26rpx;
+	margin-right: 17rpx;
+	white-space: nowrap;
+	background: #ffd2b1;
+	border-radius: 4rpx;
+	opacity: 0.7;
+}
+
+.msg-tip .tip:before {
+	width: 0;
+	height: 0;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin-top: -10rpx;
+	border: 10rpx solid transparent;
+	border-left-color: #ffd2b1;
+}
+
+/* 其他 */
+
+cover-view,
+cover-image {
+	visibility: visible;
+	/* line-height: 1; */
+}
+
+/* 被挤下线弹窗 */
+
+.kicked {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(14, 17, 21, 0.4);
+	z-index: 201;
+}
+
+.kicked .content {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 620rpx;
+	font-size: 32rpx;
+	color: #303943;
+	text-align: center;
+	background: #fff;
+}
+
+.kicked .body {
+	padding: 100rpx 0 80rpx;
+	border-bottom: 1px solid #eee;
+}
+
+.kicked .footer {
+	font-size: 34rpx;
+	height: 100rpx;
+	line-height: 45rpx;
+	padding-top: 28rpx;
+	box-sizing: border-box;
+}
+
+.kicked .footer label {
+	width: 50%;
+	display: inline-block;
+}
+
+.kicked .footer .cancel {
+	color: #a1a1a3;
+	border-right: 1px solid #eee;
+	box-sizing: border-box;
+}
+
+/* at样式 */
+
+.tips {
+	position: relative;
+	font-size: 28rpx;
+	color: #43c052;
+	line-height: 55rpx;
+	padding: 0 65rpx;
+	word-break: break-word;
+	background: #c2eac6;
+}
+
+.tips .close {
+	position: absolute;
+	width: 86rpx;
+	height: 100%;
+	top: 0;
+	right: 0;
+	text-align: center;
+}
+
+.tips .close image {
+	width: 20rpx;
+	height: 20rpx;
+}
+
+.tips.announce {
+	position: fixed;
+	left: 0;
+	top: 450rpx;
+	z-index: 200;
+	box-sizing: border-box;
+	padding-top: 12rpx;
+	color: #fff;
+	width: 750rpx;
+	height: 80rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background: rgba(48, 115, 244, 0.8);
+	transition: height 0.5s linear;
+	text-align: center;
+}
+.tips.announce .close image {
+	width: 38rpx;
+	height: 38rpx;
+}
+.rotate {
+	transition: all 0.3s;
+	transform: rotateX(-180deg);
+}
+
+.announce .textarea {
+	width: 604rpx;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tips.announce1 {
+	position: fixed;
+	visibility: hidden;
+	left: 0;
+	z-index: -10;
+	box-sizing: border-box;
+	padding: 6rpx 109rpx 0rpx 26rpx;
+	padding-top: 12rpx;
+	color: #fff;
+	width: 750rpx;
+	height: auto;
+}
+
+.tips.long {
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+.long .textarea {
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+.tips.short {
+	height: 80rpx;
+}
+
+.tips.announce .close image {
+	margin-top: 20rpx;
+}
+
+.tips .btn-common {
+	display: inline-block;
+	margin: 36rpx 0;
+	width: 148rpx;
+	height: 54rpx;
+	text-align: center;
+}
+
+.tips .copy-btn {
+	left: 192rpx;
+	border-radius: 27rpx;
+	border: 1px solid #fff;
+	margin-right: 105rpx;
+}
+
+.tips .close-btn {
+	left: 448rpx;
+}
+
+/* 未登陆 */
+
+.notLogin {
+	position: absolute;
+	top: 149rpx;
+	left: 84rpx;
+	width: 597rpx;
+	text-align: center;
+	/* background: red; */
+}
+
+.notImg {
+	width: 268rpx;
+	height: 268rpx;
+}
+
+.notText {
+	color: #a1a1a3;
+	font-size: 24rpx;
+	margin: 45rpx 0 43rpx;
+}
+
+.notButt {
+	width: 180rpx;
+	height: 60rpx;
+	line-height: 54rpx;
+	text-align: center;
+	color: #3073f4;
+	border: 1rpx solid #3073f4;
+	border-radius: 5rpx;
+	font-size: 30rpx;
+}
+
+.room.empty {
+	padding-top: 26rpx;
+	background: #f3f5f7;
+}
+
+.room.empty .img {
+	width: 270rpx;
+	height: 270rpx;
+	margin: 0 auto 45rpx;
+}
+
+.room.empty .img image {
+	width: 100%;
+	height: 100%;
+}
+.head .postImg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+}
+
+.tips .close-btn {
+	left: 448rpx;
+}
